@@ -5,8 +5,12 @@
 }
 
 html {
+
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.4;
 }
 
@@ -20,6 +24,10 @@ html {
     --large-ft: 1.125rem;
     --xlarge-ft: 1.25rem;
     --xxlarge-ft: 1.5rem;
+
+    --sm-pad: 0.25rem;
+    --md-pad: 0.5rem;
+    --lg-pad: 0.75rem
 }
 
 img {
@@ -30,6 +38,10 @@ img {
 ul {
     list-style-type: none;
 }
+
+/* a {
+    font-size: inherit;
+} */
 
 header {
     background-color: white;
@@ -90,7 +102,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 20px;
+    padding: 5rem 2rem;
 }
 
 .name {
@@ -118,32 +130,86 @@ header {
     display: block;
 }
 
+/* ABOUT ME */
+
+.about-container {
+    background-color: #222;
+    color: white;
+    padding: 5rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: var(--sm-pad);
+    background-color: white;
+    margin-bottom: 2rem;
+}
+
+.about-image {
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-information {
+    max-width: 600px;
+}
+
+.about-title {
+    margin-bottom: 0.5rem;
+}
+
+.about-description span {
+    color: skyblue;
+}
+
 
 .projects {
-    background-color: white;
-    padding: 50px 0;
+    background-color: whitesmoke;
 }
 
 .projects-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 5rem;
+
+    padding: 5rem 1rem;
 }
 
 .project {
-    background-color: white;
-    border: 1px solid gray;
-    padding: 20px;
-    max-width: 400px;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-information {
+    padding: 1rem;
 }
 
 .project .project-description {
     margin: 10px 0;
 }
 
-.project .technologies {
-    font-weight: 700;
+.project-picture {
+    /* background-color: red; */
+    max-width: 100%;
 }
 
+
+
+
+
+@media (min-width: 760px) {
+    .project {
+        flex-direction: row;
+
+        max-width: 600px;
+    }
+}
