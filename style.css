@@ -4,12 +4,12 @@
     padding: 0;
 }
 
-html {
+/* html {
 
-}
+} */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 1rem;
     line-height: 1.4;
 }
@@ -28,6 +28,15 @@ body {
     --sm-pad: 0.25rem;
     --md-pad: 0.5rem;
     --lg-pad: 0.75rem
+}
+
+.practice {
+    /* width: max(2vw, 16px); */
+    width: min(70%, 300px);
+    font-size: max(3vw, 1rem);
+    /* font-size: min(8vw, 2rem); */
+    background-color: red;
+    /* padding: max(2vw, 300px); */
 }
 
 img {
@@ -171,7 +180,7 @@ header {
 
 
 .projects {
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .projects-container {
@@ -199,7 +208,65 @@ header {
 
 .project-picture {
     /* background-color: red; */
-    max-width: 100%;
+    max-width: 80%;
+}
+
+.technology {
+    padding: 5rem 1rem;
+    background-color: whitesmoke;
+}
+
+.technology-container {
+    background-color: inherit;
+    /* border-radius: 0.5rem; */
+    padding: 1rem;
+    /* box-shadow: 0px 0px 5px slategray; */
+}
+
+.technology-picture {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.technology-image {
+    max-width: 5rem;
+}
+
+
+
+#footer {
+    background-color: black;
+    color: white;
+}
+
+.footer-container {
+    padding: 1rem;
+}
+
+.footer-name {
+    margin-bottom: 2rem;
+}
+
+.footer-name-title {
+    font-size: 1.5rem;
+}
+
+.footer-name-description {
+    font-size: 0.75rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 5px;
+}
+
+
+.footer-social-image {
+    max-width: 20px;
 }
 
 
@@ -210,6 +277,6 @@ header {
     .project {
         flex-direction: row;
 
-        max-width: 600px;
+        max-width: 800px;
     }
 }
