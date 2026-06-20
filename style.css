@@ -30,15 +30,6 @@ body {
     --lg-pad: 0.75rem
 }
 
-.practice {
-    /* width: max(2vw, 16px); */
-    width: min(70%, 300px);
-    font-size: max(3vw, 1rem);
-    /* font-size: min(8vw, 2rem); */
-    background-color: red;
-    /* padding: max(2vw, 300px); */
-}
-
 img {
     max-width: 100%;
     display: block;
@@ -116,14 +107,18 @@ header {
 
 .name {
     text-align: center;
+    /* font-size: clamp(1.5rem, 5vw, 2.5rem); */
 }
 
 .name-information h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    /* font-size: 2rem; */
 }
 
 .name-information p {
     font-size: 1rem;
+    /* font-size: clamp(1rem, 2vw, 2rem); */
+    /* font-size: min(1rem, 5vw); */
     color: #333;
 }
 
@@ -187,19 +182,30 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
-
-    padding: 5rem 1rem;
+    /* gap: 5rem; */
+    gap: clamp(1rem, 5vw, 5rem);
+    padding: clamp(1rem, 10vw, 5rem);
 }
 
 .project {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    
+
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
 }
 
 .project-information {
     padding: 1rem;
+}
+
+.project-title {
+    font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .project .project-description {
@@ -208,7 +214,8 @@ header {
 
 .project-picture {
     /* background-color: red; */
-    max-width: 80%;
+    padding: 1rem;
+    max-width: 70%;
 }
 
 .technology {
