@@ -12,12 +12,25 @@ body {
     font-family: Roboto, sans-serif;
     font-size: 1rem;
     line-height: 1.4;
+    background-color: var(--primary-black);
+    color: var(--primary-white);
 }
 
 :root {
-    --primary-bg-color: white;
-    --secundary-bg-color: black;
+    --primary-black: #111;
+    --secundary-black: #222;
+    --third-black: #333;
+    --primary-white: white;
     --third-bg-color: #b3b3b3;
+
+    --black-ops-one-font: "Black Ops One", system-ui;
+
+    --jet-black: #2A3439;
+    --carbon-black: #1B1B1B;
+    --charcoal: #555555;
+    --azure-blue: #007FFF;
+
+    --flame-orange: #FF4F00;
 
     --small-ft: 0.75rem;
     --medium-ft: 1rem;
@@ -44,9 +57,9 @@ ul {
 } */
 
 header {
-    background-color: white;
-    border-bottom: 1px solid gainsboro;
-    color: var(--primary-bg-color);
+    background-color: var(--primary-black);
+    border-bottom: 1px solid var(--third-black);
+    color: var(--primary-white);
     font-size: var(--medium-ft);
     overflow: hidden;
     padding: 20px;
@@ -54,7 +67,7 @@ header {
 
 #mobile-navbar {
     font-size: var(--xlarge-ft);
-    background-color: var(--secundary-bg-color);
+    background-color: var(--secundary-black);
     position: fixed;
     left: 100%;
     top: 0;
@@ -71,6 +84,7 @@ header {
 .close-menu-icon,
 .open-menu-icon {
     width: 40px;
+    cursor: pointer;
 }
 
 #mobile-navbar a {
@@ -89,7 +103,10 @@ header {
 }
 
 #desktop-navbar span {
-    font-size: var(--xlarge-ft);
+    /* font-size: var(--xlarge-ft); */
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-family: var(--black-ops-one-font);
+    letter-spacing: 5px;
 }
 
 #desktop-navbar ul {
@@ -98,11 +115,11 @@ header {
 
 
 .hero {
-    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5rem 2rem;
+    /* padding: 5rem 2rem; */
+    padding: clamp(3rem, 10vw, 6rem);
 }
 
 .name {
@@ -115,11 +132,16 @@ header {
     /* font-size: 2rem; */
 }
 
-.name-information p {
+.name-information h2 > span {
+    color: var(--flame-orange);
+}
+
+
+
+.name-information>p {
     font-size: 1rem;
     /* font-size: clamp(1rem, 2vw, 2rem); */
     /* font-size: min(1rem, 5vw); */
-    color: #333;
 }
 
 .social-media {
@@ -127,6 +149,7 @@ header {
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .social-media img {
@@ -175,7 +198,8 @@ header {
 
 
 .projects {
-    background-color: white;
+    border-top: 1px solid var(--third-black);
+    border-bottom: 1px solid var(--third-black);
 }
 
 .projects-container {
@@ -194,15 +218,16 @@ header {
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
     /* justify-content: center; */
-    
 
-    background-color: whitesmoke;
+
+    background-color: var(--secundary-black);
     border-radius: 0.5rem;
+    padding: clamp(1rem, 4vw, 3rem);
 }
 
-.project-information {
+/* .project-information {
     padding: 1rem;
-}
+} */
 
 .project-title {
     font-size: clamp(1rem, 3vw, 1.5rem);
@@ -214,40 +239,47 @@ header {
 
 .project-picture {
     /* background-color: red; */
-    padding: 1rem;
+    /* padding: 1rem; */
     max-width: 70%;
 }
 
 .technology {
     padding: 5rem 1rem;
-    background-color: whitesmoke;
+    color: white;
 }
 
 .technology-container {
-    background-color: inherit;
-    /* border-radius: 0.5rem; */
-    padding: 1rem;
-    /* box-shadow: 0px 0px 5px slategray; */
-}
-
-.technology-picture {
     display: flex;
     /* flex-direction: column; */
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
+}
+
+
+.technology-card {
+    background-color: var(--secundary-black);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-basis: 350px;
+
+    padding: 0.75rem;
+    /* 12px */
+    border-radius: 5px;
 }
 
 .technology-image {
-    max-width: 5rem;
+    width: 30px;
+    display: block;
+    background-color: var(--third-black);
+    padding: 5px;
+    border-radius: 2.5px;
 }
 
-
-
 #footer {
-    background-color: black;
-    color: white;
+    border-top: 1px solid var(--third-black);
 }
 
 .footer-container {
