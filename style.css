@@ -13,6 +13,19 @@
 
     --flame-orange: #FF4F00;
 
+
+    /* FONT SIZES MOBILE */
+    --mobile-h1: 2rem;
+    --mobile-h2: 1.625rem;
+    --mobile-body: 1rem;
+
+    /* FONT SIZE DESKTOP */
+    --desktop-h1: 3rem;
+    --desktop-h2: 2rem;
+    --desktop-body: 1.125rem;
+
+    --ft-span: 0.75rem;
+
     
 }
 
@@ -21,22 +34,16 @@
     margin: 0;
     padding: 0;
 }
-
-html {
-    font-size: clamp(1rem, 0.955rem + 0.227vw, 6.125rem);
-}
-
 body {
     font-family: Roboto, sans-serif;
-    /* font-size: 1rem; */
-    font-size: clamp(1rem, 0.955rem + 0.227vw, 3.125rem);
+    font-size: 1rem;
     line-height: 1.4;
     background-color: var(--primary-black);
     color: var(--primary-white);
 }
 
 h2 {
-    
+    font-size: var(--mobile-h2);
 }
 
 
@@ -66,7 +73,7 @@ textarea {
     background-color: var(--third-black);
     border-radius: 4px;
     font-family: var(--roboto-font);
-    font-size: 1rem;
+    font-size: var(--mobile-body);
     letter-spacing: 1px;
     padding: 5px;
     margin-top: 0.5rem;
@@ -86,11 +93,13 @@ header,
     font-size: inherit;
 } */
 
+/* HEADER */
+
 header {
     background-color: var(--primary-black);
     border-bottom: 1px solid var(--third-black);
     color: var(--primary-white);
-    font-size: var(--medium-ft);
+    font-size: var(--ft-span);
     overflow: hidden;
     padding: 1rem;
 }
@@ -113,7 +122,7 @@ header {
 
 .close-menu-icon,
 .open-menu-icon {
-    width: 40px;
+    width: 30px;
     cursor: pointer;
 }
 
@@ -133,8 +142,6 @@ header {
 }
 
 #desktop-navbar span {
-    /* font-size: var(--xlarge-ft); */
-    font-size: clamp(1rem, 3vw, 2rem);
     font-family: var(--black-ops-one-font);
     letter-spacing: 5px;
 }
