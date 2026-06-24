@@ -150,40 +150,36 @@ header {
     display: none;
 }
 
+/* HERO */
 
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: clamp(3rem, 10vw, 6rem);
+    padding: 3rem 1rem;
 }
 
 .name {
     text-align: center;
-    /* font-size: clamp(1.5rem, 5vw, 2.5rem); */
 }
 
 .name-information h2 {
-    /* font-size: var(--custom-heading); */
+    font-size: 2rem;
 }
 
 .name-information h2>span {
     color: var(--flame-orange);
 }
 
-
-
 .name-information p {
-    font-size: 2rem;
-    /* font-size: clamp(1rem, 2vw, 2rem); */
-    /* font-size: min(1rem, 5vw); */
+    font-size: 1rem;
 }
 
 .social-media {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 1rem;
+    margin-top: 1rem;
     cursor: pointer;
 }
 
