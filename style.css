@@ -6,23 +6,14 @@
     --third-bg-color: #b3b3b3;
 
     --black-ops-one-font: "Black Ops One", system-ui;
+    --roboto-font: Roboto, sans-serif;
 
-    --jet-black: #2A3439;
-    --carbon-black: #1B1B1B;
-    --charcoal: #555555;
-    --azure-blue: #007FFF;
+
+    
 
     --flame-orange: #FF4F00;
 
-    --small-ft: 0.75rem;
-    --medium-ft: 1rem;
-    --large-ft: 1.125rem;
-    --xlarge-ft: 1.25rem;
-    --xxlarge-ft: 1.5rem;
-
-    --sm-pad: 0.25rem;
-    --md-pad: 0.5rem;
-    --lg-pad: 0.75rem
+    
 }
 
 * {
@@ -31,12 +22,21 @@
     padding: 0;
 }
 
+html {
+    font-size: clamp(1rem, 0.955rem + 0.227vw, 6.125rem);
+}
+
 body {
     font-family: Roboto, sans-serif;
-    font-size: 1rem;
+    /* font-size: 1rem; */
+    font-size: clamp(1rem, 0.955rem + 0.227vw, 3.125rem);
     line-height: 1.4;
     background-color: var(--primary-black);
     color: var(--primary-white);
+}
+
+h2 {
+    
 }
 
 
@@ -49,10 +49,34 @@ ul {
     list-style-type: none;
 }
 
+input,
+label,
+button {
+    display: block;
+}
+
+input,
+textarea {
+    width: 100%;
+    color: var(--primary-white);
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    background-color: var(--third-black);
+    border-radius: 4px;
+    font-family: var(--roboto-font);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 5px;
+    margin-top: 0.5rem;
+}
+
 header,
 .hero,
 .projects,
 .technology,
+.contact-container,
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -68,7 +92,7 @@ header {
     color: var(--primary-white);
     font-size: var(--medium-ft);
     overflow: hidden;
-    padding: 20px;
+    padding: 1rem;
 }
 
 #mobile-navbar {
@@ -133,8 +157,7 @@ header {
 }
 
 .name-information h2 {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    /* font-size: 2rem; */
+    /* font-size: var(--custom-heading); */
 }
 
 .name-information h2>span {
@@ -143,8 +166,8 @@ header {
 
 
 
-.name-information>p {
-    font-size: 1rem;
+.name-information p {
+    font-size: 2rem;
     /* font-size: clamp(1rem, 2vw, 2rem); */
     /* font-size: min(1rem, 5vw); */
 }
@@ -255,7 +278,7 @@ header {
     padding-top: clamp(1rem, 10vw, 5rem);
     padding-bottom: clamp(1rem, 10vw, 5rem);
     padding-inline: 1rem;
-    color: white;
+    /* color: white; */
 
     display: flex;
     flex-direction: row;
@@ -308,6 +331,62 @@ header {
     background-color: var(--third-black);
     padding: 5px;
     border-radius: 2.5px;
+}
+
+
+
+/* CONTACT */
+
+.contact {}
+
+.contact-container {
+    border-top: 1px solid var(--third-black);
+    padding: clamp(1rem, 10vw, 5rem);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contact-description {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-title {
+    font-size: var(--custom-font-size);
+}
+
+.contact #form {
+    display: block;
+    background-color: var(--secundary-black);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.contact p {
+    margin: 1rem 0;
+}
+
+.contact label {
+    text-transform: uppercase;
+}
+
+.contact input {
+    margin-top: 0.5rem;
+}
+
+.contact button {
+    background-color: var(--primary-black);
+    color: var(--primary-white);
+    max-width: 100%;
+    padding: 0.3125rem;
+    border: none;
+    border-radius: 5px;
+    /* font-size: 0.75rem; */
+    text-transform: uppercase;
 }
 
 #footer {
