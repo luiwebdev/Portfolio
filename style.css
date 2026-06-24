@@ -227,6 +227,7 @@ header {
     color: skyblue;
 }
 
+/* PROJECT */
 
 .projects {
     border-top: 1px solid var(--third-black);
@@ -237,51 +238,42 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 5rem; */
-    gap: clamp(1rem, 5vw, 5rem);
-    padding: clamp(1rem, 10vw, 5rem);
-    /* padding-top: clamp(1rem, 10vw, 5rem);
-    padding-bottom: clamp(1rem, 10vw, 5rem);
-    padding-inline: 1rem; */
+    gap: 2rem;
+    padding: 3rem 1rem;
 }
 
 .project {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
-
-
     background-color: var(--secundary-black);
     border-radius: 0.5rem;
-    padding: clamp(1rem, 4vw, 3rem);
+    padding: 1rem;
+
+    max-width: 400px;
 }
 
-/* .project-information {
-    padding: 1rem;
-} */
+.project-information {
+    font-size: 1rem;
+}
 
 .project-title {
-    font-size: clamp(1rem, 3vw, 1.5rem);
+   font-size: 1.5rem;
 }
 
 .project .project-description {
     margin: 10px 0;
+    font-size: 1rem;
 }
 
 .project-picture {
-    /* background-color: red; */
-    /* padding: 1rem; */
     max-width: 70%;
 }
 
+/* TECHNOLOGY */
+
 .technology {
-    padding-top: clamp(1rem, 10vw, 5rem);
-    padding-bottom: clamp(1rem, 10vw, 5rem);
-    padding-inline: 1rem;
-    /* color: white; */
+    padding: 3rem 1rem;
 
     display: flex;
     flex-direction: row;
@@ -296,7 +288,6 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 0;
     max-width: 300px;
 
     /* background-color: red; */
@@ -331,8 +322,6 @@ header {
 .technology-image {
     width: 30px;
     display: block;
-    background-color: var(--third-black);
-    padding: 5px;
     border-radius: 2.5px;
 }
 
