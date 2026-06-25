@@ -69,6 +69,7 @@ img {
 
 .project-container {
     padding: var(--p3) var(--p1);
+    border-bottom: 1px solid var(--grey-color);
 
     display: flex;
     flex-direction: column;
@@ -79,4 +80,28 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: var(--p1);
+}
+
+/* TECH */
+
+.tech-container {
+    /* background-color: blue; */
+    padding: var(--p2) var(--p1);
+    border-bottom: 1px solid var(--grey-color);
+}
+
+.tech-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 300px;
+    margin: var(--p2) auto;
+
+    background-color: var(--grey-color);
+    padding: var(--p1);
+    border-radius: 5px;
+}
+
+.tech-image {
+    width: 40px;
 }
