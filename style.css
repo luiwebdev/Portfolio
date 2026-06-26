@@ -9,6 +9,7 @@
     --white-color: white;
     --grey-color: #444;
     --yellow: #FFBF00;
+    --light-gray: #555;
 
     /* FONTS */
     --black-ops-font: "Black Ops One", system-ui;
@@ -36,8 +37,36 @@ img {
     display: block;
 }
 
+label, 
+input,
+textarea {
+    width: 100%;
+}
 
+input,
+textarea {
+    font-family: var(--roboto-font);
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 2px;
+    border: 1px solid var(--grey-color);
+    background-color: #333;
+    color: var(--white-color);
+    letter-spacing: 1px;
+}
 
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+button {
+    font-size: 0.875rem;
+    border-radius: 5px;
+    border: 2px solid var(--grey-color);
+    text-transform: uppercase;
+    cursor: pointer;
+}
 
 /* HERO */
 
@@ -104,4 +133,33 @@ img {
 
 .tech-image {
     width: 40px;
+}
+
+/* CONTACT */
+
+.contact-container {
+    padding: var(--p1);
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--p2);
+}
+
+.contact-form {
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--p1);
+}
+
+.contact-form button {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 0.5rem 1rem;
+}
+
+.contact-form button:hover {
+    background-color: var(--grey-color);
 }
