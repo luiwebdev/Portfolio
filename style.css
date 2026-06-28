@@ -103,6 +103,12 @@ button {
     display: flex;
     flex-direction: column;
     gap: var(--p3);
+
+    /* display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 50px;
+    column-gap: 10px; */
+
 }
 
 .project-card {
