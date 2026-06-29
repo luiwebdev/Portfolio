@@ -24,6 +24,10 @@
 
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     font-size: 1rem;
     font-family: var(--roboto-font);
@@ -37,7 +41,7 @@ img {
     display: block;
 }
 
-label, 
+label,
 input,
 textarea {
     width: 100%;
@@ -68,6 +72,14 @@ button {
     cursor: pointer;
 }
 
+.hero-container,
+.project-container,
+.tech-container,
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* HERO */
 
 .hero-container {
@@ -79,14 +91,14 @@ button {
 .hero-name {
     /* background-color: blue; */
     text-align: center;
-    
+
 }
 
 .hero-title {
     font-size: var(--p2);
 }
 
-.hero-title > span {
+.hero-title>span {
     color: var(--yellow);
 }
 
@@ -100,15 +112,10 @@ button {
     padding: var(--p3) var(--p1);
     border-bottom: 1px solid var(--grey-color);
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* place-content: center; */
     gap: var(--p3);
-
-    /* display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 50px;
-    column-gap: 10px; */
-
 }
 
 .project-card {
@@ -117,20 +124,34 @@ button {
     gap: var(--p1);
 }
 
+.project-picture {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
 /* TECH */
 
 .tech-container {
     /* background-color: blue; */
     padding: var(--p2) var(--p1);
     border-bottom: 1px solid var(--grey-color);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: stretch; */
+
+    gap: 1rem;
 }
 
 .tech-card {
+    flex: 1;
+    flex-basis: 150px;
     display: flex;
     align-items: center;
     gap: 10px;
     max-width: 300px;
-    margin: var(--p2) auto;
+    /* margin: var(--p2) auto; */
 
     background-color: var(--grey-color);
     padding: var(--p1);
@@ -168,4 +189,17 @@ button {
 
 .contact-form button:hover {
     background-color: var(--grey-color);
+}
+
+
+
+@media (min-width: 550px) {
+
+    html {
+        font-size: 1.125rem;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
